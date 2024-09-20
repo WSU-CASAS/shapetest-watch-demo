@@ -33,4 +33,10 @@ class ShapeTestResultStorage {
             UserDefaults.standard.set(resultsData, forKey: "test_results")
         }
     }
+    
+    func clearResults() {
+        results.removeAll()
+        
+        UserDefaults.standard.removeObject(forKey: "test_results")
+    }
 }

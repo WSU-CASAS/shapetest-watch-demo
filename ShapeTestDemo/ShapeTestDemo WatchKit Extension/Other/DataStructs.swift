@@ -26,4 +26,12 @@ struct TestResult: Codable {
     let shapes: [ShapeResult]
     let testDuration: TimeInterval
     let finishStamp: Date
+    
+    var numAttempted: Int {
+        shapes.count
+    }
+    
+    var score: Int {
+        shapes.map({ $0.score }).reduce(0, +)
+    }
 }

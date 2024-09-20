@@ -24,13 +24,58 @@
                         <separator alignment="left" id="s7k-Ea-deg"/>
                         <button width="1" alignment="left" title="Results" id="Md5-np-vpT">
                             <connections>
-                                <action selector="resultsPushed" destination="AgC-eL-Hgc" id="MbJ-mU-eyR"/>
+                                <segue destination="SCk-eO-lLv" kind="push" id="WTV-6h-pLV"/>
                             </connections>
                         </button>
                     </items>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="32"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="0N7-uK-mQa">
+            <objects>
+                <controller identifier="ResultsListInterface" title="Results" id="SCk-eO-lLv" customClass="ResultsListInterfaceController" customModule="ShapeTestDemo_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="a6s-Gl-txm">
+                            <items>
+                                <tableRow identifier="TestResultRow" id="a0j-d2-VwX" customClass="TestResultRowController" customModule="ShapeTestDemo_WatchKit_App" customModuleProvider="target">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="ncs-sE-4OJ">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Stamp" textAlignment="center" id="GWO-B5-eCt">
+                                                <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                                            </label>
+                                            <label alignment="center" verticalAlignment="center" text="Score:" textAlignment="center" id="XpB-gz-U8k">
+                                                <fontDescription key="font" type="system" pointSize="16"/>
+                                            </label>
+                                            <label alignment="center" verticalAlignment="center" text="Duration: " textAlignment="center" id="Qv3-h3-wDZ">
+                                                <fontDescription key="font" type="system" pointSize="16"/>
+                                            </label>
+                                        </items>
+                                        <edgeInsets key="margins" left="10" right="10" top="10" bottom="10"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="durationLabel" destination="Qv3-h3-wDZ" id="Cv5-T2-8a1"/>
+                                        <outlet property="scoreLabel" destination="XpB-gz-U8k" id="OeX-WG-6qL"/>
+                                        <outlet property="stampLabel" destination="GWO-B5-eCt" id="miz-Lv-u5o"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <separator alignment="left" id="yMB-4U-tXW"/>
+                        <button width="1" alignment="left" title="Clear Results" id="6hs-al-sGQ">
+                            <color key="backgroundColor" red="0.56010389819587636" green="0.11274569243758491" blue="0.085300225966462209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="clearResultsPushed" destination="SCk-eO-lLv" id="S3X-SM-KKQ"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="resultsTable" destination="a6s-Gl-txm" id="5pZ-DV-te0"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="219" y="342"/>
         </scene>
         <!--Instructions-->
         <scene sceneID="L5m-dQ-4C5">

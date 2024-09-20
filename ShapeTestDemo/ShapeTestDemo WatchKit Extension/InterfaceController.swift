@@ -18,7 +18,4 @@ class InterfaceController: WKInterfaceController {
     @IBAction func spanishTestPushed() {
         presentController(withName: "ShapeTestInstructionsPromptInterface", context: ShapeTestLanguage.spanish)
     }
-    
-    @IBAction func resultsPushed() {
-    }
 }
