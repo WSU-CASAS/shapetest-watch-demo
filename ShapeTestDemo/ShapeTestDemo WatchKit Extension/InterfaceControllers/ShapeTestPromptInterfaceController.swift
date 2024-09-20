@@ -19,20 +19,14 @@ class ShapeTestPromptInterfaceController: WKInterfaceController {
     @IBOutlet weak var yesButton: WKInterfaceButton!
     @IBOutlet weak var noButton: WKInterfaceButton!
     
-//    private var shapeTest: ShapeTestPrompt?
+    private var language: ShapeTestLanguage = .english
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-//        if let shapeTestToShow = context as? ShapeTestPrompt {
-//            shapeTest = shapeTestToShow
-//            
-//            setupShapeTest()
-//        } else {
-//            // There's a problem getting the shape test, so just exit the prompt:
-//            PromptManager.sharedInstance.promptResponseConfirmed()
-//            dismiss()
-//        }
+        if let language = context as? ShapeTestLanguage {
+            self.language = language
+        }
     }
     
     override func didAppear() {
@@ -97,17 +91,20 @@ class ShapeTestPromptInterfaceController: WKInterfaceController {
         
         updateTimeLeft()
         
-//        yesButton.setTitle(shapeTest?.sameButtonText ?? "YES")
-//        noButton.setTitle(shapeTest?.differentButtonText ?? "NO")
+        switch language {
+        case .spanish:
+            yesButton.setTitle("SÍ")
+            noButton.setTitle("NO")
+        default:
+            yesButton.setTitle("YES")
+            noButton.setTitle("NO")
+        }
         
         setupTestStartVisibility()
     }
     
     /// Actually start the shape test (e.g. start the starting countdown):
     private func startShapeTest() {
-        // Disable the prompt timeout during test:
-//        PromptManager.sharedInstance.clearPromptTimeout()
-        
         countdownTimer = Timer.scheduledTimer(
             withTimeInterval: 1.0, // tick every second
             repeats: true,
@@ -266,9 +263,6 @@ class ShapeTestPromptInterfaceController: WKInterfaceController {
 //        let testDuration = Constants.shapeTestDurationSeconds - mainTestTimeLeft
 //        
 //        shapeTest?.testFinished(completedDuration: testDuration)
-//        
-//        // Have the prompt manager move to the next prompt:
-//        PromptManager.sharedInstance.moveToNextPromptInGroup()
         
         dismiss()
     }
