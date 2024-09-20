@@ -10,6 +10,7 @@
 		E42E56CA26C4A57800457936 /* ShapeTestInstructionsPromptInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42E56C926C4A57800457936 /* ShapeTestInstructionsPromptInterfaceController.swift */; };
 		E4435F6826BE032300BFC083 /* ShapeTestPromptInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4435F6726BE032300BFC083 /* ShapeTestPromptInterfaceController.swift */; };
 		E4E400DF2C9CFE99009CF0C1 /* DataStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E400DE2C9CFE99009CF0C1 /* DataStructs.swift */; };
+		E4E400E12C9D0112009CF0C1 /* ShapeTestResultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E400E02C9D0112009CF0C1 /* ShapeTestResultStorage.swift */; };
 		E4F255042294ABE900834E6A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4F255022294ABE900834E6A /* Interface.storyboard */; };
 		E4F255062294ABEA00834E6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4F255052294ABEA00834E6A /* Assets.xcassets */; };
 		E4F2550D2294ABEA00834E6A /* ShapeTestDemo WatchKit Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E4F2550C2294ABEA00834E6A /* ShapeTestDemo WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -46,6 +47,7 @@
 		E4435F6726BE032300BFC083 /* ShapeTestPromptInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTestPromptInterfaceController.swift; sourceTree = "<group>"; };
 		E4C918F6229DDD21009258D9 /* ShapeTestDemo WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ShapeTestDemo WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		E4E400DE2C9CFE99009CF0C1 /* DataStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructs.swift; sourceTree = "<group>"; };
+		E4E400E02C9D0112009CF0C1 /* ShapeTestResultStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTestResultStorage.swift; sourceTree = "<group>"; };
 		E4F254FD2294ABE900834E6A /* ShapeTestDemo WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShapeTestDemo WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F255032294ABE900834E6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		E4F255052294ABEA00834E6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				E4E400DE2C9CFE99009CF0C1 /* DataStructs.swift */,
+				E4E400E02C9D0112009CF0C1 /* ShapeTestResultStorage.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			files = (
 				E4F255142294ABEA00834E6A /* ExtensionDelegate.swift in Sources */,
 				E42E56CA26C4A57800457936 /* ShapeTestInstructionsPromptInterfaceController.swift in Sources */,
+				E4E400E12C9D0112009CF0C1 /* ShapeTestResultStorage.swift in Sources */,
 				E4E400DF2C9CFE99009CF0C1 /* DataStructs.swift in Sources */,
 				E4435F6826BE032300BFC083 /* ShapeTestPromptInterfaceController.swift in Sources */,
 				E4F255122294ABEA00834E6A /* InterfaceController.swift in Sources */,

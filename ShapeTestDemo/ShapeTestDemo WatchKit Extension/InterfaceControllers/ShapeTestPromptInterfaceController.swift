@@ -21,12 +21,16 @@ class ShapeTestPromptInterfaceController: WKInterfaceController {
     
     private var language: ShapeTestLanguage = .english
     
+    private var shapeResults: [ShapeResult] = []
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         if let language = context as? ShapeTestLanguage {
             self.language = language
         }
+        
+        setupShapeTest()
     }
     
     override func didAppear() {
@@ -242,12 +246,14 @@ class ShapeTestPromptInterfaceController: WKInterfaceController {
             score = answeredShapeIsSame ? 0 : 1
         }
         
-//        shapeTest?.addShapeResult(
-//            reactionTime: Float(shapeReactionTime),
-//            shapeName: currentShapeName,
-//            previousShapeName: previousShapeName,
-//            score: score
-//        )
+        shapeResults.append(
+            ShapeResult(
+                previousShapeName: previousShapeName,
+                shapeName: currentShapeName,
+                score: score,
+                reactionTime: shapeReactionTime
+            )
+        )
         
         showNewShapeAfterDelay()
     }
@@ -259,10 +265,17 @@ class ShapeTestPromptInterfaceController: WKInterfaceController {
         // Clear the timer:
         countdownTimer.invalidate()
         
-//        // Calculate duration of test and tell prompt we're finished:
-//        let testDuration = Constants.shapeTestDurationSeconds - mainTestTimeLeft
-//        
-//        shapeTest?.testFinished(completedDuration: testDuration)
+        // Calculate duration of test and tell prompt we're finished:
+        let testDuration = TimeInterval(45 - mainTestTimeLeft)
+        let finishStamp = Date.now
+        
+        ShapeTestResultStorage.shared.addResult(
+            TestResult(
+                shapes: shapeResults,
+                testDuration: testDuration,
+                finishStamp: finishStamp
+            )
+        )
         
         dismiss()
     }

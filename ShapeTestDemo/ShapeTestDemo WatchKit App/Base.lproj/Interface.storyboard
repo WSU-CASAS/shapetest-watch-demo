@@ -195,9 +195,9 @@
                     <connections>
                         <outlet property="buttonsGroup" destination="LIR-Ae-rRQ" id="4ar-QD-ek2"/>
                         <outlet property="countdownLabel" destination="Zed-Xy-HqS" id="GMm-6x-qLX"/>
-                        <outlet property="noButton" destination="faO-Bc-uWG" id="jLp-oc-Utp"/>
+                        <outlet property="noButton" destination="faO-Bc-uWG" id="sEF-0M-r5v"/>
                         <outlet property="shapeGroup" destination="Uay-9U-Q78" id="OLv-ea-KM5"/>
-                        <outlet property="yesButton" destination="GMj-LF-qDj" id="5Zr-vG-i9r"/>
+                        <outlet property="yesButton" destination="GMj-LF-qDj" id="1Il-E1-uIG"/>
                     </connections>
                 </controller>
             </objects>
