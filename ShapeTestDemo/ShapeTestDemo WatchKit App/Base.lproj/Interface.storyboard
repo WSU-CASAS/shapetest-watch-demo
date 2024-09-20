@@ -75,7 +75,65 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="219" y="342"/>
+            <point key="canvasLocation" x="219" y="460"/>
+        </scene>
+        <!--Test Result-->
+        <scene sceneID="Wke-9q-wM4">
+            <objects>
+                <controller identifier="TestResultInterface" title="Test Result" id="2h5-dP-utZ" customClass="TestResultInterfaceController" customModule="ShapeTestDemo_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="Date" textAlignment="center" id="U26-IP-vfK">
+                            <fontDescription key="font" type="boldSystem" pointSize="18"/>
+                        </label>
+                        <label alignment="center" text="Score: " textAlignment="center" id="1Bw-qC-YmO">
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                        </label>
+                        <label alignment="center" text="Duration: " textAlignment="center" id="7JJ-wG-b17">
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                        </label>
+                        <separator alignment="left" id="1YY-l7-Q8X"/>
+                        <group width="1" alignment="left" layout="vertical" id="ivV-na-kRB">
+                            <items>
+                                <label alignment="left" text="Shapes:" id="ngj-b3-ayS"/>
+                                <table alignment="left" id="SuW-wP-cFL">
+                                    <items>
+                                        <tableRow identifier="ShapeResultRow" id="K9A-BY-zCY" customClass="ShapeResultRowController" customModule="ShapeTestDemo_WatchKit_App" customModuleProvider="target">
+                                            <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="Lck-fi-KjF">
+                                                <items>
+                                                    <group width="1" alignment="left" id="xzi-sV-MLB">
+                                                        <items>
+                                                            <label alignment="center" verticalAlignment="center" text="PrevShape" id="E3q-IQ-P7S"/>
+                                                            <label alignment="center" verticalAlignment="center" text="➡" id="jkK-Td-jqO"/>
+                                                            <label alignment="center" verticalAlignment="center" text="Shape" id="ZUA-uY-enS"/>
+                                                        </items>
+                                                    </group>
+                                                    <label alignment="center" text="CORRECT" textAlignment="center" id="w99-zo-uxl"/>
+                                                    <label alignment="center" text="Reaction: 1s" textAlignment="center" id="YJ3-tc-7sW"/>
+                                                </items>
+                                                <edgeInsets key="margins" left="5" right="5" top="5" bottom="5"/>
+                                            </group>
+                                            <connections>
+                                                <outlet property="correctLabel" destination="w99-zo-uxl" id="2Uk-Qv-dB3"/>
+                                                <outlet property="previousShapeLabel" destination="E3q-IQ-P7S" id="s5i-9f-Esy"/>
+                                                <outlet property="reactionLabel" destination="YJ3-tc-7sW" id="AWj-Ey-7KR"/>
+                                                <outlet property="shapeLabel" destination="ZUA-uY-enS" id="MA7-Q9-40R"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                </table>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="durationLabel" destination="7JJ-wG-b17" id="6h9-N8-Xcb"/>
+                        <outlet property="scoreLabel" destination="1Bw-qC-YmO" id="SEI-31-o1w"/>
+                        <outlet property="shapeResultsGroup" destination="ivV-na-kRB" id="aEK-mU-hqr"/>
+                        <outlet property="shapesTable" destination="SuW-wP-cFL" id="i4X-YI-PmP"/>
+                        <outlet property="stampLabel" destination="U26-IP-vfK" id="jw3-LX-muw"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="488" y="459"/>
         </scene>
         <!--Instructions-->
         <scene sceneID="L5m-dQ-4C5">

@@ -28,6 +28,13 @@ class ResultsListInterfaceController: WKInterfaceController {
         }
     }
     
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        pushController(
+            withName: "TestResultInterface",
+            context: ShapeTestResultStorage.shared.results[rowIndex]
+        )
+    }
+    
     @IBAction func clearResultsPushed() {
         ShapeTestResultStorage.shared.clearResults()
         
