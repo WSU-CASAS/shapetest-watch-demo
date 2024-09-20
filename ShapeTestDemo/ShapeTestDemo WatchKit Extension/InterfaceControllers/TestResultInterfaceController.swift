@@ -53,14 +53,14 @@ class TestResultInterfaceController: WKInterfaceController {
 }
 
 class ShapeResultRowController: NSObject {
-    @IBOutlet weak var previousShapeLabel: WKInterfaceLabel!
-    @IBOutlet weak var shapeLabel: WKInterfaceLabel!
+    @IBOutlet weak var previousShapeImage: WKInterfaceImage!
+    @IBOutlet weak var shapeImage: WKInterfaceImage!
     @IBOutlet weak var correctLabel: WKInterfaceLabel!
     @IBOutlet weak var reactionLabel: WKInterfaceLabel!
     
     func setUp(forResult result: ShapeResult) {
-        previousShapeLabel.setText(result.previousShapeName)
-        shapeLabel.setText(result.shapeName)
+        previousShapeImage.setImageNamed(result.previousShapeName)
+        shapeImage.setImageNamed(result.shapeName)
         correctLabel.setText(result.score > 0 ? "CORRECT (1)" : "WRONG (0)")
         reactionLabel.setText("Reaction: \(String(format: "%.2f", result.reactionTime))s")
     }

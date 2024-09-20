@@ -100,11 +100,11 @@
                                         <tableRow identifier="ShapeResultRow" id="K9A-BY-zCY" customClass="ShapeResultRowController" customModule="ShapeTestDemo_WatchKit_App" customModuleProvider="target">
                                             <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="Lck-fi-KjF">
                                                 <items>
-                                                    <group width="1" alignment="left" id="xzi-sV-MLB">
+                                                    <group width="1" alignment="left" spacing="5" id="xzi-sV-MLB">
                                                         <items>
-                                                            <label alignment="center" verticalAlignment="center" text="PrevShape" id="E3q-IQ-P7S"/>
-                                                            <label alignment="center" verticalAlignment="center" text="➡" id="jkK-Td-jqO"/>
-                                                            <label alignment="center" verticalAlignment="center" text="Shape" id="ZUA-uY-enS"/>
+                                                            <imageView width="25" height="25" alignment="center" verticalAlignment="center" image="Circle" id="aWe-0B-dww"/>
+                                                            <imageView width="20" height="20" alignment="center" verticalAlignment="center" image="arrowshape.right.fill" catalog="system" id="AjD-j1-Krw"/>
+                                                            <imageView width="25" height="25" alignment="center" verticalAlignment="center" image="Triangle" id="RPt-Lr-NIA"/>
                                                         </items>
                                                     </group>
                                                     <label alignment="center" text="CORRECT" textAlignment="center" id="w99-zo-uxl"/>
@@ -114,9 +114,9 @@
                                             </group>
                                             <connections>
                                                 <outlet property="correctLabel" destination="w99-zo-uxl" id="2Uk-Qv-dB3"/>
-                                                <outlet property="previousShapeLabel" destination="E3q-IQ-P7S" id="s5i-9f-Esy"/>
+                                                <outlet property="previousShapeImage" destination="aWe-0B-dww" id="wbo-PP-jI5"/>
                                                 <outlet property="reactionLabel" destination="YJ3-tc-7sW" id="AWj-Ey-7KR"/>
-                                                <outlet property="shapeLabel" destination="ZUA-uY-enS" id="MA7-Q9-40R"/>
+                                                <outlet property="shapeImage" destination="RPt-Lr-NIA" id="FVR-5b-LuA"/>
                                             </connections>
                                         </tableRow>
                                     </items>
@@ -309,5 +309,7 @@
     </scenes>
     <resources>
         <image name="Circle" width="222" height="222"/>
+        <image name="Triangle" width="220" height="220"/>
+        <image name="arrowshape.right.fill" catalog="system" width="128" height="105"/>
     </resources>
 </document>
