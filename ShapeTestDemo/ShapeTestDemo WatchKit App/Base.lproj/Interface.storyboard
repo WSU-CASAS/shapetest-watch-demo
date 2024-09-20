@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="32700.99.1234" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch41"/>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="22609"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ShapeTestDemo_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="32"/>
+        </scene>
+        <!--Instructions-->
+        <scene sceneID="L5m-dQ-4C5">
+            <objects>
+                <controller identifier="ShapeTestInstructionsPromptInterface" title="Instructions" fullScreen="YES" id="phy-yI-Ork" customClass="ShapeTestInstructionsPromptInterfaceController" customModule="ShapeTestDemo_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="20" alignment="left" id="jxb-9d-bzv"/>
+                        <group width="1" alignment="left" layout="vertical" id="N6G-sX-QQg">
+                            <items>
+                                <group width="1" height="30" alignment="center" id="Ofj-OO-YyX">
+                                    <items>
+                                        <label alignment="center" text="Press " id="ykB-vd-mwC">
+                                            <fontDescription key="font" type="boldSystem" pointSize="26"/>
+                                        </label>
+                                        <button height="30" alignment="center" title="YES" id="0dB-CW-ic4">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="boldSystem" pointSize="24"/>
+                                            <connections>
+                                                <action selector="yesButtonPushed" destination="h9o-Ir-I07" id="qd9-RE-oVu"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <label alignment="center" text="if the shape is the same as the previous one" textAlignment="center" numberOfLines="0" id="o5a-Xd-tVf">
+                                    <fontDescription key="font" type="boldSystem" pointSize="26"/>
+                                </label>
+                                <group width="1" height="30" alignment="center" id="bDX-NF-8Wa">
+                                    <items>
+                                        <label alignment="center" text="and " id="QFV-HY-zlW">
+                                            <fontDescription key="font" type="boldSystem" pointSize="26"/>
+                                        </label>
+                                        <button height="30" alignment="center" title="NO" id="cL8-PP-6OR">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="1" green="0.0078431372550000003" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="boldSystem" pointSize="24"/>
+                                            <connections>
+                                                <action selector="noButtonPushed" destination="h9o-Ir-I07" id="gUm-XV-2oW"/>
+                                            </connections>
+                                        </button>
+                                        <label alignment="center" text=" if it" id="djC-S6-NKv">
+                                            <fontDescription key="font" type="boldSystem" pointSize="26"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <label alignment="center" text="is not." textAlignment="center" numberOfLines="0" id="qSZ-kF-OYz">
+                                    <fontDescription key="font" type="boldSystem" pointSize="26"/>
+                                </label>
+                                <label width="1" alignment="center" text="↓" textAlignment="center" id="6jt-Rk-O9a">
+                                    <fontDescription key="font" type="boldSystem" pointSize="35"/>
+                                </label>
+                                <button width="1" height="75" alignment="left" title="START" id="CQI-G0-3fu">
+                                    <fontDescription key="font" type="boldSystem" pointSize="24"/>
+                                    <connections>
+                                        <action selector="startButtonPressed" destination="phy-yI-Ork" id="0tU-Hi-aCK"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" hidden="YES" layout="vertical" id="yWS-41-cR7">
+                            <items>
+                                <group width="1" height="30" alignment="center" id="u8Q-Su-dm3">
+                                    <items>
+                                        <label alignment="center" text="Selecciona " id="D33-1J-Pme">
+                                            <fontDescription key="font" type="boldSystem" pointSize="26"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="pgo-Mx-JvJ">
+                                    <items>
+                                        <button height="30" alignment="center" title="SÍ" id="Y9U-FD-tgX">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="boldSystem" pointSize="24"/>
+                                            <connections>
+                                                <action selector="yesButtonPushed" destination="h9o-Ir-I07" id="Gv5-Du-ndv"/>
+                                            </connections>
+                                        </button>
+                                        <label alignment="center" text=" si la" id="pik-uz-4la">
+                                            <fontDescription key="font" type="boldSystem" pointSize="26"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <label alignment="center" text="figura es la misma que la anterior y" textAlignment="center" numberOfLines="0" id="J0M-hi-7J8">
+                                    <fontDescription key="font" type="boldSystem" pointSize="26"/>
+                                </label>
+                                <group width="1" height="30" alignment="center" id="XB4-b6-c8H">
+                                    <items>
+                                        <button height="30" alignment="center" title="NO" id="LAu-Hd-lDU">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="1" green="0.0078431372550000003" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="boldSystem" pointSize="24"/>
+                                            <connections>
+                                                <action selector="noButtonPushed" destination="h9o-Ir-I07" id="Uvn-xW-KU8"/>
+                                            </connections>
+                                        </button>
+                                        <label alignment="center" text=" si no" id="2hr-IC-khH">
+                                            <fontDescription key="font" type="boldSystem" pointSize="26"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <label alignment="center" text="lo es." id="XbK-UY-Frb">
+                                    <fontDescription key="font" type="boldSystem" pointSize="26"/>
+                                </label>
+                                <label width="1" alignment="center" text="↓" textAlignment="center" id="wjT-jU-EG6">
+                                    <fontDescription key="font" type="boldSystem" pointSize="35"/>
+                                </label>
+                                <button width="1" height="75" alignment="left" title="COMENZAR" id="6Rb-G5-nER">
+                                    <fontDescription key="font" type="boldSystem" pointSize="24"/>
+                                    <connections>
+                                        <action selector="startButtonPressed" destination="phy-yI-Ork" id="tJd-p0-sYb"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" height="15" alignment="left" id="C8P-82-aMT"/>
+                    </items>
+                    <connections>
+                        <outlet property="englishInstructionsGroup" destination="N6G-sX-QQg" id="zNZ-TP-KeN"/>
+                        <outlet property="spanishInstructionsGroup" destination="yWS-41-cR7" id="0zr-Md-YBq"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="488" y="32"/>
+        </scene>
+        <!--Shape Test-->
+        <scene sceneID="qR1-qE-KNG">
+            <objects>
+                <controller identifier="ShapeTestPromptInterface" title="Shape Test" fullScreen="YES" id="h9o-Ir-I07" customClass="ShapeTestPromptInterfaceController" customModule="ShapeTestDemo_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="0.040000000000000001" alignment="left" id="4n2-3C-mwB"/>
+                        <group width="1" height="0.55000000000000004" alignment="center" backgroundImage="Circle" contentMode="scaleAspectFit" id="Uay-9U-Q78">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="45" textAlignment="center" id="Zed-Xy-HqS">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="29"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" height="0.29999999999999999" alignment="center" id="LIR-Ae-rRQ">
+                            <items>
+                                <button width="0.5" height="1" alignment="center" title="YES" id="GMj-LF-qDj">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="25"/>
+                                    <connections>
+                                        <action selector="yesButtonPushed" destination="h9o-Ir-I07" id="2m7-F1-IKa"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" height="1" alignment="center" title="NO" id="faO-Bc-uWG">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" red="1" green="0.0078431372549019607" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="25"/>
+                                    <connections>
+                                        <action selector="noButtonPushed" destination="h9o-Ir-I07" id="0u7-OH-0eE"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" height="0.10000000000000001" alignment="left" id="xgj-My-TnG"/>
+                    </items>
+                    <connections>
+                        <outlet property="buttonsGroup" destination="LIR-Ae-rRQ" id="4ar-QD-ek2"/>
+                        <outlet property="countdownLabel" destination="Zed-Xy-HqS" id="GMm-6x-qLX"/>
+                        <outlet property="noButton" destination="faO-Bc-uWG" id="jLp-oc-Utp"/>
+                        <outlet property="shapeGroup" destination="Uay-9U-Q78" id="OLv-ea-KM5"/>
+                        <outlet property="yesButton" destination="GMj-LF-qDj" id="5Zr-vG-i9r"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="727" y="32"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Circle" width="222" height="222"/>
+    </resources>
+</document>
