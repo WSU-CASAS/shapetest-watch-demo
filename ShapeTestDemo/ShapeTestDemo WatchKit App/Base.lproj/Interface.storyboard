@@ -9,7 +9,26 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ShapeTestDemo_WatchKit_App" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ShapeTestDemo_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="English Shape Test" id="2S7-h4-L9t">
+                            <connections>
+                                <action selector="englishTestPushed" destination="AgC-eL-Hgc" id="Oyj-LZ-nXm"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Spanish Shape Test" id="h7Q-He-V5m">
+                            <connections>
+                                <action selector="spanishTestPushed" destination="AgC-eL-Hgc" id="U5I-l3-T3p"/>
+                            </connections>
+                        </button>
+                        <separator alignment="left" id="s7k-Ea-deg"/>
+                        <button width="1" alignment="left" title="Results" id="Md5-np-vpT">
+                            <connections>
+                                <action selector="resultsPushed" destination="AgC-eL-Hgc" id="MbJ-mU-eyR"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="32"/>
         </scene>

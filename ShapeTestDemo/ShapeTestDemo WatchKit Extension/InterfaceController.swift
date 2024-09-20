@@ -11,5 +11,14 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    @IBAction func englishTestPushed() {
+        presentController(withName: "ShapeTestInstructionsPromptInterface", context: ShapeTestLanguage.english)
+    }
     
+    @IBAction func spanishTestPushed() {
+        presentController(withName: "ShapeTestInstructionsPromptInterface", context: ShapeTestLanguage.spanish)
+    }
+    
+    @IBAction func resultsPushed() {
+    }
 }

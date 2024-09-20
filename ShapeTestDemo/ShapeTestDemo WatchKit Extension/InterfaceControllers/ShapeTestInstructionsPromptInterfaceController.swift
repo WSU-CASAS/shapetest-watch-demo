@@ -14,37 +14,33 @@ class ShapeTestInstructionsPromptInterfaceController: WKInterfaceController {
     @IBOutlet weak var englishInstructionsGroup: WKInterfaceGroup!
     @IBOutlet weak var spanishInstructionsGroup: WKInterfaceGroup!
     
-//    private var prompt: ShapeTestInstructionsPrompt?
+    private var language: ShapeTestLanguage = .english
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-//        if let promptToShow = context as? ShapeTestInstructionsPrompt {
-//            prompt = promptToShow
-//        }
+        if let language = context as? ShapeTestLanguage {
+            self.language = language
+        }
         
         updateInterface()
     }
     
     private func updateInterface() {
-//        switch prompt?.instructionsLanguage {
-//        case .spanish:
-//            englishInstructionsGroup.setHidden(true)
-//            spanishInstructionsGroup.setHidden(false)
-//        default:
+        switch language {
+        case .spanish:
+            englishInstructionsGroup.setHidden(true)
+            spanishInstructionsGroup.setHidden(false)
+        default:
             englishInstructionsGroup.setHidden(false)
             spanishInstructionsGroup.setHidden(true)
-//        }
+        }
     }
     
     @IBAction func startButtonPressed() {
-//        // Mark prompt as responded to:
-//        prompt?.promptResponseTime = Date()
-//        
-//        // Tell PromptManager to move on to the next prompt:
-//        PromptManager.sharedInstance.moveToNextPromptInGroup()
-        
         // Dissmiss this prompt:
         dismiss()
+        
+        WKExtension.shared().rootInterfaceController?.presentController(withName: "ShapeTestPromptInterface", context: language)
     }
 }
