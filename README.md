@@ -7,5 +7,4 @@ You will need to download the project and use Xcode on a Mac to open and view th
 You can choose to start an English or Spanish shape test, as well as view the results.
 
 ## Reference/Questions
-For now: Please contact [Diane Cook](https://eecs.wsu.edu/~cook/)
-Paper reference to come soon
+Schmitter-Edgecombe, M., Luna, C., Beech, B., Dai, S., & Cook, D. J. (2024). Capturing cognitive capacity in the everyday environment across a continuum of cognitive decline using a smartwatch n-back task and ecological momentary assessment. *Neuropsychology*, 10.1037/neu0000984. Advance online publication. [https://doi.org/10.1037/neu0000984](https://doi.org/10.1037/neu0000984)
